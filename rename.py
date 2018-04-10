@@ -1,8 +1,7 @@
 # coding:utf-8
 import os
-# folder=raw_input('输入作业文件夹名:')
-# path='/Users/y4m1n/Downloads/'+folder
-path='/Users/y4m1n/Downloads/test'
+folder=raw_input('输入作业文件夹名:')
+path='/Users/y4m1n/Downloads/'+folder
 last_name=['方','孔','杨','胡','牛','王','陈','张','宋','董','付',
            '李','王','方','卫','孙','崔','文','钟','吴','唐','俞',
            '曾','刘','连','于','潘','黄','罗','苏','马','程','郑','蔡']
