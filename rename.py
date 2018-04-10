@@ -10,7 +10,8 @@ for file in os.listdir(path):
     # 找有后缀的
     if file.find('.')>0:
         postfix = file.split('.')[-1]
-        file_name = file.strip().split('.')[0]
+        # 去括号，去掉后缀，去掉多余的“号”
+        file_name = file.strip().split('.')[0].replace('号','')
         # 修改不规范连结符号
         if file_name.find('_') or file_name.find('+'):
             file_name=file_name.replace('_','-')
