@@ -1,7 +1,9 @@
 #! /usr/local/bin/ruby
 # coding:utf-8
+# Work with family_names.txt
 family_names=File.read("family_names.txt").split(" ")
-teacher_names=["老师","大嘴"]
+# TO DO: fix issues with "程"
+teacher_names=["老师","大嘴","及技","和技"]
 # 可根据人数调整此参数
 num_of_classmates = 47
 id_list = (1..num_of_classmates).to_a
