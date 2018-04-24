@@ -1,6 +1,7 @@
 #! /usr/local/bin/ruby
 # Work with family_names.txt
-family_names = File.read('family_names.txt').split(' ')
+require "pathname"
+family_names = File.read(File.join(Pathname.new(File.dirname(__FILE__)).realpath,'family_names.txt')).split(' ')
 # TO DO: fix issues with "程"
 teacher_names = ["老师","大嘴","及技","和技"]
 # 可根据人数调整此参数
