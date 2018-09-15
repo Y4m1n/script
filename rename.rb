@@ -9,7 +9,10 @@ id_list = (1..num_of_classmates).to_a
 dropouts = [29, 45, 34]
 id_list = id_list - dropouts
 Dir.glob("#{ARGV[0]}/**/*") .each do |file_name|
-  id = /\d{2,}/.match(file_name).to_s[-2..-1]
+  if file_name.scan(/\d{1,}号/)[0].length==2:
+    id = '0'+file_name.scan(/\d{1,}号/)[0][0]
+  else
+    id = /\d{2,}/.match(file_name).to_s[-2..-1]
   puts 'WARNING: repeated id: ',file_name unless id_list.include?(id.to_i)
   id_list.delete(id.to_i)
   name = file_name.delete('号').scan(/[\u4e00-\u9fa5]{2,}/).select { |text| (text.length < 4 ) && (family_names.include?(text[0])) unless teacher_names.include?(text[1..-1]) }
